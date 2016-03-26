@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Meus pacientes</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="alura.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>Meus pacientes</h1>
+			</div>
+		</header>
+		<main class="container">
+			<section>
+				<h2>Meus pacientes</h2>
+				<table>
+					<tr>
+						<th>Nome</th>
+						<th>Peso(kg)</th>
+						<th>Altura(m)</th>
+						<th>IMC</th>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Leonardo</td>
+						<td class="info-peso" id="peso-1">57</td>
+						<td class="info-altura" id="altura-1">1.67</td>
+						<td class="info-imc" id="imc-1"></td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Paulo</td>
+						<td class="info-peso" id="peso-2">100</td>
+						<td class="info-altura" id="altura-2">2.00</td>
+						<td class="info-imc" id="imc-2"></td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Stuart</td>
+						<td class="info-peso" id="peso-2">120</td>
+						<td class="info-altura" id="altura-2">1.80</td>
+						<td class="info-imc" id="imc-2"></td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Rafael</td>
+						<td class="info-peso" id="peso-2">110</td>
+						<td class="info-altura" id="altura-2">1.60</td>
+						<td class="info-imc" id="imc-2"></td>
+					</tr>
+				</table>
+				<button id="calcula-imcs" class="botao ">Calcular Imcs</button>
+			</section>
+			<section>
+				<h2>Adicionar novo paciente</h2>	
+				<form action="#">
+					<fieldset>
+						<label for="nome">Nome:</label>
+						<input id="campo-nome" type="text" placeholder="digite o nome do seu paciente">
+					</fieldset>
+					<fieldset class="campo-medio">
+						<label for="peso">Peso:</label>
+						<input id="campo-peso" type="text" placeholder="digite o peso do seu paciente">
+					</fieldset>
+					<fieldset class="campo-medio">
+						<label for="altura">Altura:</label>
+						<input id="campo-altura" type="text" placeholder="digite a altura do seu paciente">
+					</fieldset>
+					<fieldset class="campo-medio">
+						<label for="campo-cpf">CPF:</label>
+						<input id="campo-cpf" type="text" placeholder="111.111.111-11" riquered pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" >
+					</fieldset>	
+					<fieldset class="campo-medio">
+						<label for="campo-cep">CEP:</label>
+						<input id="campo-cep" type="text" placeholder="00046-090" riquered pattern="\d{5}-?\d{3}"> 
+					</fieldset>	
+					<fieldset class="campo-grande">	    
+						<label for="campo-email">Email:</label>
+						<input id="campo-email" type="text" placeholder="email@gmail.com" riquered pattern="\w+@\w+\.\w+\.?\.?\w*?"> 
+					</fieldset>
+					<fieldset class="campo-grande">	    
+						<label for="campo-telefone">Telefone:</label>
+						<input id="campo-telefone" type="text" placeholder="46086451" riquered pattern="([1-9][1-9])?9?\d{4}-?\d{4}"> 
+						<!-- o traço pode ou não ser inoutado quem está informando isto é a ?   um seuqnci de padrão  de email pode ser 
+						[a-zA-z_\d]+@[a-z]+\.com\.?b?r?  ou também \w+\.?\w*  w+\.\w+(\.\w+)?  email ou nomo e ==  \w+[\w\.]*(@\w+(\.\w+)+)?cpf ou cnpj \d{3}(\.?\d{3}){2}-?\d{2}|\d{2}(\.?\d{3}){2}/\d{4}-?\d{2} -->
+					</fieldset>	
+					<fieldset class="campo-medio">
+						<label for="campo-cartao">Cartão:</label>
+						<input id="campo-cartao" type="text" placeholder="0000-0000-0000-0000" riquered pattern="\d{4}([ -]?\d{4}){3}?">
+					</fieldset>
+					<fieldset class="campo-medio">
+						<label for="campo-validade">Validade:</label>
+						<input id="campo-validade" type="text" placeholder="01-12" riquered pattern="(0[1-9]|1[0-2])/\d{2}"> 
+					</fieldset>	
+					<input type="submit" id="adicionar-paciente" class="botao bto-principal" value="Adicionar" ></button>	
+				</form>
+				
+			</section>
+		</main>
+		<script src="montarPaciente.js"></script>
+		<script src="varrrerArray.js"></script>
+		<script src="funcoesParaTabelas.js"></script>
+		<script src="calcula-imc.js"></script>
+		<script src="adicionaPaciente.js"></script>
+	</body>
+</html>
