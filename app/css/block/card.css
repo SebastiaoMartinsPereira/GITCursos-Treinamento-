@@ -1,0 +1,80 @@
+/*para que um elemento filho respeite a position de seu pai 
+o elemento oai deve ter um valor para o atributo position diferente de static;*/
+
+.card{
+	padding: 25px 10px 10px 10px;
+	display: inline-block;
+	width: 24%;
+	box-sizing:border-box;
+	position: relative;
+    margin-bottom: 20px;
+    min-height: 130px;
+    max-height: 190px;
+}
+/*
+o traco entre o nme das classes significa que a classe após o traço é ligeiramente filha da classe anterior*/
+/* o underline significa que a classe é uma modificadora da classe pai*/
+
+.wrap-card-options{
+	position:absolute;
+	top:-16px;
+	left:0px;
+	opacity: 0;
+}
+
+/*quando ao mouse estiver sobre a class card sua classe filha deve receber as propriedades abaixo.*/
+.card:hover .wrap-card-options{
+	display:flex;
+	opacity: 1;
+     /*atribuindo uma transação ao atributo opacidade*/
+	transition: opacity 0.4s linear;
+}
+
+.card-options{
+	background-color:#fff;
+	background-repeat: no-repeat;
+    background-position:center center;
+    background-size: 16px;
+	width:24px;
+    height:24px;
+    text-indent:-9999px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.5);
+    display:inline-block;
+    box-sizing:border-box;
+}
+
+.card-options.isActive{
+	border-width:4px;
+}
+
+.card_delete{
+	background-image: url("../../image/delete x24.png");
+
+}
+
+.card_editar{	
+	background-image: url("../../image/editar x24.png");
+}
+
+.card_content[contenteditable="true"]{
+	outline: 4px dashed rgba(0, 0, 0, 0.5);
+
+}
+/*atribuição de caracteristicas através de atributos inclusos entre os caracteres [].*/
+[data-color="first"]{
+	background-color: #45aaee;
+}
+
+[data-color="second"]{
+	background-color: #FF1010;
+}
+
+[data-color="third"]{
+	background-color: #76EF40;
+}
+
+[data-color="fourth"]{
+	background-color: #EBEF40;
+}
