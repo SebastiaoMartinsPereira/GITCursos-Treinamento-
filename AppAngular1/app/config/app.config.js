@@ -12,9 +12,9 @@
         function config($stateProvider, $urlRouterProvider) {
 
             //setamos a rota padrão
-            $$urlRouterProvider.otherwise('/listar');
+            $urlRouterProvider.otherwise('/Listar');
             //url:'layout'
-            $$stateProvider.
+            $stateProvider.
             state('layout', {
                 templateUrl: 'app/views/layout.html',
                 abstract: true,
@@ -35,3 +35,4 @@
         }
     }
 )();
+
