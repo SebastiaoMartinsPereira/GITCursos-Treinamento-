@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <link rel="stylesheet" type="text/css" href="css/block/header.css">
   <link rel="stylesheet" type="text/css" href="css/block/card.css">
+  <link rel="stylesheet" type="text/css" href="css/block/newcard.css">
 </head>
 <body>
   <header class="header container">
@@ -23,8 +24,15 @@
       </ul>
     </nav>
   </header>
+
+  <form class="newCard">
+  	<textarea class="newCard-content" placeholder="Digite seu texto!"></textarea>	
+  	<input class="newCard-action" type="submit" value="Salvar"></input>	
+  </form>
+   
+
   <section class="container">
-  	<ol>
+  	<ol class="wrap-card">
   		<li class="card" data-color="first"> 
   			<nav class="wrap-card-options">
   				<ul>
@@ -167,6 +175,7 @@
 
 <script type="text/javascript" src="javascript/varrerArray.js"></script>
 <script type="text/javascript" src="javascript/card.js"></script>
+<script type="text/javascript" src="javascript/newcard.js"></script>
 
 </body>
 </html>

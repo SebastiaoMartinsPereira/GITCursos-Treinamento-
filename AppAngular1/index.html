@@ -5,12 +5,19 @@
     <meta charset="utf-8" />
     <link href="asserts/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body ui-view >
+<body ui-view>
     <script src="asserts/angular.min.js"></script>
     <script src="asserts/angularRouter.min.js"></script>
     <!--//importação do modulo principal-->
     <script src="app/modules/app.module.js"></script>
     <!--//importação do modulo de configuração-->
     <script src="app/config/app.config.js"></script>
+    <!--importa o controle para ser usado em todo o htmll-->
+    <script src="app/controllers/listar.controller.js"></script>
+    <script src="app/controllers/cadastrar.controller.js"></script>
+    <!--contantes que serão utilizadas no projeto-->
+    <script src="app/constants/app.constants.js"></script>
+    <!--importa a classe de serviço a ser uttilizado-->
+    <script src="app/services/amigoService.js"></script>
 </body>
 </html>

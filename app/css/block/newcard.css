@@ -1,0 +1,38 @@
+.newCard{
+	background-color: #C5C5C5;
+	padding:24px 127px;
+	margin-bottom: 15px;
+
+}
+
+.newCard-content{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:3px;
+	height: 40px;
+	width: 560px;
+	padding:8px;
+	border:1px solid #fff ;
+	transition: height 0.5s linear,
+	           border 0.5s linear;
+}
+
+.newCard-content:focus{
+	height: 100px;
+	border: 1px solid #555;
+	box-shadow: 5px 2px 50px #34A3D7;
+	//box-shadow: inset 5em 1em gold;
+}
+
+.newCard-action{
+	font-size:16px;
+	width:84px;
+	height:34px;
+	display:block;
+	background-color:#8272c7;
+	margin-right:auto;
+	margin-left:auto;
+	cursor:pointer;
+	margin-top: 20px;
+}

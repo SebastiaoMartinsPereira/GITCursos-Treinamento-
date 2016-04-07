@@ -12,7 +12,6 @@
 var $cards = document.querySelectorAll(".card");
 /*Recupero todos os elementos card options*/
 var $cardoptions = document.querySelectorAll(".card-options");
-
 varrerArray($cards,function(card){
 	card.addEventListener('click',function(event){
         /*indica o elemento que foi clicado*/
@@ -51,6 +50,10 @@ varrerArray($cards,function(card){
 				$this.classList.remove('isActive');
 			};
 		}
+	});
+
+	card.addEventListener('mouseenter',function(){
+		
 	});
 });
 

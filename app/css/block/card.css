@@ -43,6 +43,7 @@ o traco entre o nme das classes significa que a classe após o traço é ligeira
     border: 2px solid rgba(0,0,0,0.5);
     display:inline-block;
     box-sizing:border-box;
+    cursor: pointer;
 }
 
 .card-options.isActive{
