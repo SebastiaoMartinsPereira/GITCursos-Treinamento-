@@ -47,14 +47,14 @@ td {
 	font-style: italic;
 }
 
-.remove-item {	
+.remove-item {
 	background: #F30;
 	border-radius: 2px;
 	color: white;
 	font-size: 0.7em;
 	text-decoration: none;
 	text-transform: uppercase;
-	
+
 	display: inline-block;
 	padding: 0.5em;
 }
@@ -66,7 +66,7 @@ input[type=button] {
 	text-transform: uppercase;
 
 	box-shadow: 0 1px 3px #777;
-	
+
 	display: block;
 	padding: 0.5em 1em;
 	margin: 1em 0;
@@ -82,3 +82,30 @@ input[type=button] {
 	margin: 2em 0;
 }
 
+.recuperado{
+    background:#FE0;
+}
+
+.propaganda td {
+    background: #9F0;
+    padding: 1em 0.5em;
+    text-align: center;
+
+    color: #333;
+    font-style: italic;
+}
+
+#mostra-propagandas{
+    display:none;
+}
+
+.item-remove{
+    background: #F30;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.7em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: none;
+    padding: 0.5em;
+}
