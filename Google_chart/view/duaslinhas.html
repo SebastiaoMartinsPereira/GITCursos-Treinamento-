@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+    //carrega
+    google.load('visualization','1',{'packages':['corechart']});
+    google.setOnLoadCallback(desenhaGrafico);
+
+    function desenhaGrafico(){
+      var data = new google.visualization.DataTable();
+
+      //adiciona as coulunas que serão exibidas no gráfico.
+      data.addColumn('date','Dia');
+      data.addColumn('number','Conta Poupança');
+      data.addColumn('number','Conta Corrente');
+
+      //indica a quantdade de linhas que terá o gráfico.
+      data.addRows(5);
+
+      //adicona os dados que serão renderizados no gráfico.
+      data.setValue(0,0,new Date(2016,04,02));
+      data.setValue(0,1,1450.445);
+      data.setValue(0,2,300.45);
+      data.setValue(1,0,new Date(2016,04,03));
+      data.setValue(1,1,3450.4);
+      data.setValue(1,2,400.0554);
+      data.setValue(2,0,new Date(2016,04,04));
+      data.setValue(2,1,5450.043);
+      data.setValue(2,2,590.023);
+      data.setValue(3,0,new Date(2016,04,05));
+      data.setValue(3,1,20450.043);
+      data.setValue(3,2,678.0234);
+      data.setValue(4,0,new Date(2016,04,06));
+      data.setValue(4,1,10450.055);
+      data.setValue(4,2,098.02);
+
+      //formata a data para o padrão desejado
+      var formatter = new google.visualization.DateFormat({ formatType: 'medium'});
+      //indica o data table e a coluna que será formatada;
+      formatter.format(data,0);
+
+      var formatterNumber = new google.visualization.NumberFormat(
+        {pattern:'#######.##',prefix: '$', negativeColor: 'red', negativeParens: true});
+      formatterNumber.format(data, 1);
+      formatterNumber.format(data, 2);
+
+     //cria o gráfico
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      //desenha o gráfico
+      chart.draw(data,{width:700,height:240,title:'Gastos por mês',colors:['red','green'],curveType: 'function',backgroundColor:'yellow'});
+
+    };
+
+</script>
+</head>
+<body>
+  <h1>Gastos por mês</h1>
+  <div id="chart_div">
+
+  </div>
+</body>
+</html>
