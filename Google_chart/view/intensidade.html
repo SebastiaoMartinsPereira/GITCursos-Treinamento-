@@ -1,50 +1,50 @@
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
+  <html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
 
-    //carrega
-    google.load('visualization','1',{'packages':['intensitymap']});
-    google.setOnLoadCallback(desenhaGrafico);
+      //carrega
+      google.load('visualization','1',{'packages':['intensitymap']});
+      google.setOnLoadCallback(desenhaGrafico);
 
-    function desenhaGrafico(){
-      var data = new google.visualization.DataTable();
-      data.addColumn('string','','País');
-      data.addColumn('number', 'Área (1000 km2)');
-      data.addColumn('number', 'População (mil)');
+      function desenhaGrafico(){
+        var data = new google.visualization.DataTable();
+        data.addColumn('string','','País');
+        data.addColumn('number', 'Área (1000 km2)');
+        data.addColumn('number', 'População (mil)');
 
-      //indica a quantdade de linhas que terá o gráfico.
-      data.addRows(2);
+        //indica a quantdade de linhas que terá o gráfico.
+        data.addRows(2);
 
-      //adicona os dados que serão renderizados no gráfico.
-      data.setValue(0, 0, 'BR');//Brasil
-      data.setValue(0, 1, 8515);
-      data.setValue(0, 2, 190732);
+        //adicona os dados que serão renderizados no gráfico.
+        data.setValue(0, 0, 'BR');//Brasil
+        data.setValue(0, 1, 8515);
+        data.setValue(0, 2, 190732);
 
-      data.setValue(1, 0, 'CO');//Colômbia
-      data.setValue(1, 1, 1138);
-      data.setValue(1, 2, 45986);
+        data.setValue(1, 0, 'CO');//Colômbia
+        data.setValue(1, 1, 1138);
+        data.setValue(1, 2, 45986);
 
-      //cria o gráfico
-      var chart = new google.visualization.IntensityMap(document.getElementById('chart_div'));
-      //desenha o gráfico
-      var option = {
-                       region : 'south_america'
-                     , width : 450
-                     , height : 300
-                     , title : 'South'
-                     , is3D : true,
-                   };
-      chart.draw(data,option);
-    };
+        //cria o gráfico
+        var chart = new google.visualization.IntensityMap(document.getElementById('chart_div'));
+        //desenha o gráfico
+        var option = {
+                         region : 'south_america'
+                       , width : 450
+                       , height : 300
+                       , title : 'South'
+                       , is3D : true,
+                     };
+        chart.draw(data,option);
+      };
 
-</script>
-</head>
-<body>
-  <h1>Gastos por mês</h1>
-  <div id="chart_div">
+  </script>
+  </head>
+  <body>
+    <h1>Gastos por mês</h1>
+    <div id="chart_div">
 
-  </div>
-</body>
-</html>
+    </div>
+  </body>
+  </html>
