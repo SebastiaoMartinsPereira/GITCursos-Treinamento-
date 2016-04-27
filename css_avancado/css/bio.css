@@ -5,6 +5,55 @@
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    position: relative;
+    -webkit-animation quica 1s infinite;
+    animation quica 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+@-webkit-keyframes quica {
+    from {
+        top: 0;
+    }
+    90% {
+        transform: rotate(-2deg);
+    }
+    95% {
+        transform: rotate(2deg);
+    }
+    to {
+        top: 1 em;
+    }
+}
+
+@keyframes quica {
+    from {
+        top: 0;
+    }
+    90% {
+        transform: rotate(-2deg);
+    }
+    95% {
+        transform: rotate(2deg);
+    }
+    to {
+        top: 1 em;
+    }
+}
+
+
+blockquote.citacao-bio.fiat:hover {
+    transform: rotate(10deg) translate(0px,0px);
+    box-shadow: 0 0 1em 2px black;
 }
 
 .petrobras {
@@ -15,4 +64,24 @@
 .fiat {
     float: right;
     margin-right: 0;
+    transition: 1s;
 }
+
+h1 {
+    -webkit-animation: aparece 2s;
+    animation: aparece 2s;
+}
+@-webkit-keyframes aparece {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+@keyframes aparece {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }

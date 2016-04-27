@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Bootstrap</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css"  title="boot" charset="utf-8">
+      <style>
+         .navbar-header button {
+         color: #fff
+         }
+         .fullscreen {
+            width:100%;
+        }
+        main {
+            padding-top:50px;
+        }
+      </style>
+   </head>
+   <body>
+      <!--  MENU-->
+      <header>
+         <!-- define uma cor para a navbar -->
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+               <!-- inclui uma area para o logo da empresa -->
+               <a class="navbar-brand" href="#">Caelum</a>
+               <!--  Usado para mostra os itens da ul-->
+               <button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">Menu</button>
+            </div>
+            <!--  esconde os itens dentro a div-->
+            <div class="collapse navbar-collapse">
+               <!--  define padrão para a ul-->
+               <ul class="navbar-nav nav">
+                  <li>
+                     <a href="">Novidades</a>
+                  </li>
+                  <li>
+                     <a href="">Mais Vendidos</a>
+                  </li>
+                  <li>
+                     <a href="">Promoções</a>
+                  </li>
+                  <!-- Defini a li como sendo um menu do tipo dropdown -->
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     Camisetas <span class="caret"><span>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Masculinas</a></li>
+                        <li><a href="#">Femininas</a></li>
+                        <li><a href="#">Infantil</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <!-- Indica que é um fomr que esta dentro de uma navbar -->
+               <!-- Adição do vanbar-right para alinha o form de busca a direita-->
+               <form class="navbar-form navbar-right">
+                  <!-- indica que é um agrupamento de controles em um form -->
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Digite sua busca!" />
+                  </div>
+                  <input type="submit" value="Buscar" class="btn btn-default"/>
+               </form>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <!-- coloca em um container que ocupa 100% da largura da tela -->
+         <div class="container-fluid">
+            <!--  Define uma linha para incluir o conteudo dentro da div-->
+            <div class="row">
+               <!-- Cria a estrutura de carousel -->
+               <div id="carousel" class="carousel slide" data-ride="carousel">
+                  <!--  Define contente para os itens do carousel-->
+                  <div class="carousel-inner" role="listbox">
+                    <!-- Agrupa cada item a ser mostrado no carousel -->
+                     <div class="item active">
+                        <img src="img/banner1.jpg" alt="Moda" class="fullscreen" >
+                     </div>
+                     <div class="item">
+                        <img src="img/banner2.jpg" alt="Moda Infantil" class="fullscreen">
+                     </div>
+                  </div>
+                  <!-- Controles para voltar/avancar banners -->
+                  <a href="#carousel" class="left carousel-control" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a href="#carousel" class="right  carousel-control" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div>
+            <h3 class="text-center">Novidades</h3>
+         </div>
+         <div class=" col-md-12 col-md-4 thumbnail text-center">
+            <figure>
+               <img src="img/camisa-azul.png" alt="Camisa azul importada" />
+               <div>
+                  <h4>Camisa Azul Importada</h4>
+                  <p>Camisa azul importada com preço acessivel e com pano de qualidade</p>
+               </div>
+            </figure>
+            <div class="btn-group">
+               <a href="#" class="btn btn-default">R$ 190,00</a>
+               <a href="#" class="btn btn-primary">
+               <span class="glyphicon glyphicon-shopping-cart">
+               </span>
+               Comprar
+               </a>
+            </div>
+         </div>
+         <div class="col-md-12 col-md-4 thumbnail text-center">
+            <figure>
+               <img src="img/camisa-azul.png" alt="Camisa azul importada" />
+               <div>
+                  <h4>Camisa Azul Importada</h4>
+                  <p>Camisa azul importada com preço acessivel e com pano de qualidade</p>
+               </div>
+            </figure>
+            <div class="btn-group">
+               <a href="#" class="btn btn-default">R$ 190,00</a>
+               <a href="#" class="btn btn-primary">
+               <span class="glyphicon glyphicon-shopping-cart">
+               </span>
+               Comprar
+               </a>
+            </div>
+         </div>
+         <div class="col-md-12 col-md-4 thumbnail text-center">
+            <figure>
+               <img src="img/camisa-azul.png" alt="Camisa azul importada" />
+               <div>
+                  <h4>Camisa Azul Importada</h4>
+                  <p>Camisa azul importada com preço acessivel e com pano de qualidade</p>
+               </div>
+            </figure>
+            <div class="btn-group">
+               <a href="#" class="btn btn-default">R$ 190,00</a>
+               <a href="#" class="btn btn-primary">
+               <span class="glyphicon glyphicon-shopping-cart">
+               </span>
+               Comprar
+               </a>
+            </div>
+         </div>
+      </main>
+      <script src="js/jquery-2.2.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
