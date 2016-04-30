@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Bootstrap</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css"  title="boot" charset="utf-8">
+      <link rel="stylesheet" href="css/animate.css" />
+      <style>
+         .navbar-header button {
+         color: #fff
+         }
+         .fullscreen {
+            width:100%;
+        }
+        main {
+            padding-top:50px;
+        }
+
+        footer {
+            background:#333;
+            color:#fff;
+            padding:20px 0;
+            text-align:center;
+        }
+
+      </style>
+   </head>
+   <body>
+      <!--  MENU-->
+      <header>
+         <!-- define uma cor para a navbar -->
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+               <!-- inclui uma area para o logo da empresa -->
+               <a class="navbar-brand" href="#">Caelum</a>
+               <!--  Usado para mostra os itens da ul-->
+               <button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">Menu</button>
+            </div>
+            <!--  esconde os itens dentro a div-->
+            <div class="collapse navbar-collapse">
+               <!--  define padrão para a ul-->
+               <ul class="navbar-nav nav">
+                  <li>
+                     <a href="">Novidades</a>
+                  </li>
+                  <li>
+                     <a href="">Mais Vendidos</a>
+                  </li>
+                  <li>
+                     <a href="">Promoções</a>
+                  </li>
+                  <!-- Defini a li como sendo um menu do tipo dropdown -->
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     Camisetas <span class="caret"><span>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Masculinas</a></li>
+                        <li><a href="#">Femininas</a></li>
+                        <li><a href="#">Infantil</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <!-- Indica que é um fomr que esta dentro de uma navbar -->
+               <!-- Adição do vanbar-right para alinha o form de busca a direita-->
+               <form class="navbar-form navbar-right">
+                  <!-- indica que é um agrupamento de controles em um form -->
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Digite sua busca!" />
+                  </div>
+                  <input type="submit" value="Buscar" class="btn btn-default"/>
+               </form>
+            </div>
+         </nav>
+      </header>
+      <main>
+        <dic class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="img/produto.png" alt="Camiseta Azul" class="img-responsive thumbnail">
+            </div>
+            <div class="col-sm-8">
+              <div class="text-center">
+                <h1>Camisa Azul importada</h1>
+                <h3> R$ 129.00</h3>
+                <a href="#" class="btn btn-primary btn_lg">Comprar</a>
+              </div>
+
+              <!--  Cria as abas o datatoggle diz que elas terão o comportamento de trocar ao clique-->
+              <div class="row">
+                <ul class="nav nav-tabs">
+                  <li class="nav"><a href="#descricao"  data-toggle="tab">Descrição</a></li>
+                  <li class="nav"><a href="#informacoes"  data-toggle="tab">Informações</a></li>
+                </ul>
+
+                <!--  Conteúdo das abas-->
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="descricao">
+                      <p>Camiseta azul feita em algodão com caimento perfeito proporcionando leveza e conforto nos movimentos.</p>
+                      <p>Camiseta meia manga com decote arrendondado e importada.</p>
+                  </div>
+                  <div class="tab-pane fade" id="informacoes" >
+                    <p>Feita em algodão importado.</p>
+                    <table class="table table-responsive">
+                      <tbody>
+                        <tr>
+                          <td>Tecido</td>
+                          <td>Algodão</td>
+                        </tr>
+                        <tr>
+                          <td>Tamanho</td>
+                          <td>P, M, G, GG</td>
+                        </tr>
+                        <tr>
+                          <td>Fabricante</td>
+                          <td>Caelum</td>
+                        </tr>
+                        <tr>
+                          <td>Origem</td>
+                          <td>China</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+        </dic>
+
+      </main>
+      <footer>
+        <p>Avenida Paulista nº 1</p>
+        <p>(11) 2239-1234</p>
+      </footer>
+      <script src="js/jquery-2.2.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

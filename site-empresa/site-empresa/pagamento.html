@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Bootstrap</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css"  title="boot" charset="utf-8">
+      <link rel="stylesheet" href="css/animate.css" />
+      <style>
+         .navbar-header button {
+         color: #fff
+         }
+         .fullscreen {
+            width:100%;
+        }
+        main {
+            padding-top:50px;
+        }
+
+        footer {
+            background:#333;
+            color:#fff;
+            padding:20px 0;
+            text-align:center;
+        }
+
+      </style>
+   </head>
+   <body>
+      <!--  MENU-->
+      <header>
+         <!-- define uma cor para a navbar -->
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+               <!-- inclui uma area para o logo da empresa -->
+               <a class="navbar-brand" href="#">Caelum</a>
+               <!--  Usado para mostra os itens da ul-->
+               <button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">Menu</button>
+            </div>
+            <!--  esconde os itens dentro a div-->
+            <div class="collapse navbar-collapse">
+               <!--  define padrão para a ul-->
+               <ul class="navbar-nav nav">
+                  <li>
+                     <a href="">Novidades</a>
+                  </li>
+                  <li>
+                     <a href="">Mais Vendidos</a>
+                  </li>
+                  <li>
+                     <a href="">Promoções</a>
+                  </li>
+                  <!-- Defini a li como sendo um menu do tipo dropdown -->
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     Camisetas <span class="caret"><span>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Masculinas</a></li>
+                        <li><a href="#">Femininas</a></li>
+                        <li><a href="#">Infantil</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <!-- Indica que é um fomr que esta dentro de uma navbar -->
+               <!-- Adição do vanbar-right para alinha o form de busca a direita-->
+               <form class="navbar-form navbar-right">
+                  <!-- indica que é um agrupamento de controles em um form -->
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Digite sua busca!" />
+                  </div>
+                  <input type="submit" value="Buscar" class="btn btn-default"/>
+               </form>
+            </div>
+         </nav>
+      </header>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h2 class="panel-title">Sua compra</h2>
+                </div>
+
+                <div class="panel-body">
+                  <img src="img/produto.png" alt="Camiseta Azul" class="img-responsive thumbnail">
+
+                  <dl>
+                    <dt>Nome</dt>
+                    <dd>Camiseta Azul</dd>
+                    <dt>Cor</dt>
+                    <dd>Azul</dd>
+                    <dt>Tamanho</dt>
+                    <dd>G</dd>
+                    <dt>Preço</dt>
+                    <dd>R$ 129.00</dd>
+                  </dl>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-8">
+                <form>
+                  <fiedset>
+                    <div class="form-group">
+                      <label for="nome">Nome completo:</label>
+                      <input id="nome" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                      <label for="cpf">CPF:</label>
+                      <input id="cpf" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <div class="input-group">
+                          <span class="input-group-addon">@</span>
+                          <input id="email" type="email" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input id="novidades" type="checkbox" value="sim" checked="checked">
+                        Quero receber novidades da loja
+                      </label>
+                    </div>
+                  </fiedset>
+                  <fieldset>
+                       <legend>Informações de pagamento</legend>
+                       <div class="form-group">
+                          <label for="bandeira">Bandeira:</label>
+                          <select id="bandeira" class="form-control">
+                              <option value="visa">Visa</option>
+                              <option value="mastercard">Mastercard</option>
+                              <option value="amex">American Express</option>
+                          </select>
+                      </div>
+                        <div class="form-group">
+                            <label for="numero">Número</label>
+                            <input id="numero" type="number" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="validade">Validade</label>
+                            <input id="validade" type="month" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input id="cvv" type="text" maxlength="4" class="form-control" />
+                        </div>
+                   </fieldset>
+                   <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        Confirmar pedido
+                    </button>
+                </form>
+            </div>
+          </div>
+        </dic>
+
+      </main>
+      <footer>
+        <p>Avenida Paulista nº 1</p>
+        <p>(11) 2239-1234</p>
+      </footer>
+      <script src="js/jquery-2.2.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
