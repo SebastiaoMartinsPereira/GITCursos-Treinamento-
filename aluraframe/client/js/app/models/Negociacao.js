@@ -14,11 +14,11 @@ class Negociacao{
   };
 
   get quantidade(){
-    return this._volume;
+    return this._quantidade;
   };
 
   get valor(){
-    return this.valor;
+    return this._valor;
   };
 
   get volume(){
