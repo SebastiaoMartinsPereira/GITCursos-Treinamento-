@@ -1,13 +1,25 @@
-angular.module('alurapic').controller('FotosController',function($scope,$http){
-    
-    $scope.fotos = [];
-    $scope.filtro = '';
+angular.module('alurapic').controller('FotosController', function($scope, recursoFoto) {
+	
+	$scope.fotos = [];
+	$scope.filtro = '';
+	$scope.mensagem = '';
 
-    $http.get('/v1/fotos')
-    .success((retorno) => $scope.fotos = retorno)
-    .error( erro => console.log(erro));
+	recursoFoto.query(function(fotos) {
+		$scope.fotos = fotos;
+	}, function(erro) {
+		console.log(erro);
+	});
 
-    // $http.get('/vv1/fotos')
-    // .then((retorno) => $scope.fotos = retorno.data)
-    // .catch( erro => console.log(erro));
+	$scope.remover = function(foto) {
+
+		recursoFoto.delete({fotoId: foto._id}, function() {
+			var indiceDaFoto = $scope.fotos.indexOf(foto);
+			$scope.fotos.splice(indiceDaFoto, 1);
+			$scope.mensagem = 'Foto ' + foto.titulo + ' removida com sucesso!';
+		}, function(erro) {
+			console.log(erro);
+			$scope.mensagem = 'Não foi possível apagar a foto ' + foto.titulo;
+		});
+	};
+
 });
