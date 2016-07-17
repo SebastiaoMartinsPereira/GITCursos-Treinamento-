@@ -3,12 +3,181 @@
    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../arquitect/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../arquitect/css/index.css">
 </head>
 <body>
-    <div class="container"> 
+
+    <section class="container"> 
+
         <h2>Sobre Nós</h2>
         <img class="img-responsive" src="img/empresa.jpg">
+
+         <!--paineis sobre-->
+        <section class="panel-group paineis-Sobre" id="painelSobre" role="tablist" aria-multiselectable="true">
+            <!-- panel define um tipo de painel entre os elementos em seu interior-->
+            <div class="panel panel-success">  
+                 <!--Define um cabeçalho para o painel-->
+                <div class="panel-heading" role="tab" id="heading1">
+                    <!--panel-title define o título para o painel-->
+                    <h4 class="panel-title">  
+                            <!--data-toggle diz que este elemento controla a visualização de outro-->
+                            <!--data-parent diz qual o elemento pai que esta relazionado a todos os paineis-->
+                            <a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#painelSobre" aria-expanded="true" aria-controls="collapseOne">
+                                Surgimos
+                            </a>
+                     </h4>
+                </div>
+                <!--Define o corpo,conteúdo do painel-->
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headding1">
+                    <div class="panel-body">
+                        <!-- class collapse indica que este elemento terá sua visualização controla por outro-->
+                        <!-- collapse in quando estiver com esta classe o elemento está visualmente ativo-->
+                            Em 2014 a NewProg Softwares Fez seu primeiro projeto.
+                    </div>
+                </div>
+            </div> <!--fim panel-->
+
+            <div class="panel panel-success">  
+                <div class="panel-heading" role="tab" id="heading2">
+                    <h4 class="panel-title">  
+                            <a href="#collapse2" role="button" data-toggle="collapse" data-parent="#painelSobre" aria-expanded="true" aria-controls="collapse2">
+                                 Nossa forma de trabalhar
+                            </a>
+                     </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headding2">
+                    <div class="panel-body">
+                        Buscamos entender ao máximo qual o problema enfrentado pelo nosso cliente, afim de podermos implementar a tecnologia mais correta e aficaz para a solução ideal.                             
+                    </div>
+                </div>
+            </div> <!--fim panel-->
+
+            <div class="panel panel-success">  
+                <div class="panel-heading" role="tab" id="headding3">
+                    <h4 class="panel-title">  
+                            <a href="#collapse3" role="button" data-toggle="collapse" data-parent="#painelSobre" aria-expanded="true" aria-controls="collapse3">
+                                Equipe 
+                            </a>
+                     </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headding3">
+                    <div class="panel-body">
+                        Nossa equipe é integrada por excelentes profissionais, com uma vasta experiência de mercado.
+                    </div>
+                </div>
+            </div> <!--fim panel-->         
+        </div>
+    </section>
+    
+    <div class="jumbotron">
+        <div class="caotainer">
+            <h3>Mais de 300 prêmios em design e em conforto.</h3>
+            <p>Mais de 5 milhões de clientes satisfeitos em todo o mundo.</p>
+        </div>
     </div>
+
+    <section class="container">
+        <h2>Projetos</h2>
+        <div>
+            <figure class="thumbnail">
+                <img src="img/projetos/residencia-ludi.png" alt="Card img cap" class="img-fluid">
+                <figcaption class="caption">
+                    <h3>Residencia Ludi</h3>
+                    <p>O palácio Dionísio foi eleito pela revista 'Grandes palácios' como o palácio mais lindo do mundo.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <figure class="thumbnail">
+                <img src="img/projetos/mercado-marapira.png" alt="cad marapira" class="img-fluid">
+                <figcaption class="caption">
+                <h3>Casa do Lago</h3>
+                <p>A Casa do Lago foi lar de inúmeras pessoas que conheciam o presidente da época.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <figure class="thumbnail">
+                <img src="img/projetos/palacio-dionisio.png" alt="Card Dionisio" class="img-fluid">
+                <figcaption class="caption">
+                    <h3>Casa Castelo</h3>
+                    <p>A Casa Castelo é o último lançamento da TopCasaFina Arquitetura, feita para um monge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section>
+
+        <div class="depoimentos-titulo">
+            <h2 class="container">Depoimento de clientes</h2>
+        </div>
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <figure class="item active">
+                    <img src="../arquitect/img/depoimentos/depo1.png" alt="Depoimento 1">
+                    <figcaption class="carousel-caption">
+                        <h3>Yuri Padilha</h3>
+                        <p>Gostei muito.</p>
+                    </figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="../arquitect/img/depoimentos/depo2.png" alt="Depoimento 2">
+                    <figcaption class="carousel-caption">
+                        <h3>Fernando Stefaneni</h3>
+                        <p>Excelente trabalho</p>
+                    </figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="../arquitect/img/depoimentos/depo3.png" alt="Depoimento 3">
+                    <figcaption class="carousel-caption">
+                        <h3>Caio Sauzas</h3>
+                        <p>Gostei, competência em primeiro lugar.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </section>
+    
+    <section class="container">
+            <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"  frameborder="0" allowfullscreen  src="https://www.youtube.com/embed/i_3Pv1AygeI"></iframe>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Contato</h2>
+        <form action="">
+        <div class="form-group">
+            <label for="txtNome">Nome</label>
+            <input type="txt" id="txtNome" class="form-control" placeholder="Digite seu nome">
+        </div>        
+    </form>
+
+    </section>
+ <br/>
 
     <script src="../arquitect/js/jquery.min.js">  </script>
     <script src="../arquitect/bootstrap/js/bootstrap.js">  </script>
