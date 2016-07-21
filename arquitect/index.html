@@ -7,6 +7,33 @@
 </head>
 <body>
 
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-topCasaFina" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#">TopCasaFina Arquitetura</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-topCasaFina">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#sobre-nos">Sobre Nós</a></li>
+                        <li><a href="#nossos-projetos">Nossos Projetos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <section class="container"> 
 
         <h2>Sobre Nós</h2>
@@ -163,20 +190,67 @@
     <section class="container">
             <!-- 16:9 aspect ratio -->
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"  frameborder="0" allowfullscreen  src="https://www.youtube.com/embed/i_3Pv1AygeI"></iframe>
+            <iframe class="embed-responsive-item" width="100%" frameborder="0" allowfullscreen  src="https://www.youtube.com/embed/i_3Pv1AygeI"></iframe>
         </div>
     </section>
 
     <section class="container">
         <h2>Contato</h2>
+        <h4>Entre em contato conosco</h4>
         <form action="">
+
         <div class="form-group">
             <label for="txtNome">Nome</label>
-            <input type="txt" id="txtNome" class="form-control" placeholder="Digite seu nome">
+            <input type="text" id="txtNome" class="form-control" placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+             <label for="txtNome">Email</label>
+
+             <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="email" id="txtEmail" class="form-control" placeholder="email@email.com">
+             </div>
+
+            <div class="tipos-wrapper">
+                <div class="tipo grupo-radio">
+                    <div class="radio">
+                        <label for="pfisica">Pessoa Fisica
+                            <input id="pfisica" type="radio" name="tipo-pessoa" value="fisica" checked>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="pjuridica">Pessoa Jurídica
+                            <input id="pjuridica" type="radio" name="tipo-pessoa" value="jurídica">
+                        </label>
+                    </div>
+                </div>
+                <div class="tipo">
+                    <select class="contato-select form-control" name="tipo-solicitado" >
+                        <option value=""  disabled selected>Tipo Solicitação</option>
+                        <option value="casa" >Casa</option>
+                        <option value="mansao"  >Mansão</option>
+                        <option value="castelo">Castelo</option>
+                    </select>
+                </div>
+            </div>
         </div>        
     </form>
-
     </section>
+
+
+    <footer>
+        <address>
+           <strong>TopCasaFina Arquitetura</strong><br>
+            Rua Vergueiro, 3185, Vila Mariana<br>
+            São Paulo, SP<br>
+
+            Tel: (11) 5571-2751 ou 5083-3884<br>
+        </address>
+
+        <address> 
+            E-mail: contato.topcasafina@alura.com.br
+        </address>
+    </footer>
  <br/>
 
     <script src="../arquitect/js/jquery.min.js">  </script>
