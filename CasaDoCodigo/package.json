@@ -1,0 +1,22 @@
+{
+  "name": "casadocodigo",
+  "version": "1.0.0",
+  "description": "desvendando o node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastiaoMartinsPereira/GITCursos-Treinamento-.git"
+  },
+  "keywords": [
+    "meunode"
+  ],
+  "author": "sebastião",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebastiaoMartinsPereira/GITCursos-Treinamento-/issues"
+  },
+  "homepage": "https://github.com/SebastiaoMartinsPereira/GITCursos-Treinamento-#readme"
+}

@@ -11,3 +11,4 @@ server = http.createServer(function(req,res){
 console.log('Servidor rodando...');//mesnsagem de log no terminal.
 
 
+// node nome do arquivo para executar a aplicação.
