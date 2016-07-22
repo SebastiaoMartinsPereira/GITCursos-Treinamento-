@@ -1,0 +1,7 @@
+dentro da pasta raiz do projeto.
+criar o projeto no pm
+   npm init
+instalar o express biblioteca utlizada para gerrir requisições.
+   npm install express -save
+instalar o EJS (EMBEDDED JAVA SCRIPT) biblioteca utilizada o código js junco html no servidor.
+   npm install express -save
