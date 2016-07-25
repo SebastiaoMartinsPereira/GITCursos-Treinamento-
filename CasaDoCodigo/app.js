@@ -13,16 +13,17 @@
 // // node nome do arquivo para executar a aplicação.
 
 
-//inicar o servidor com o Exoress.
-var express = require('express');
-var app = express();
+// //inicar o servidor com o Exoress.
+// var express = require('express');
+// var app = express();
+// app.set('view engine','ejs');
 
-app.set('view engine','ejs');
+//carregado agora a partir de outro arquivo.
+var app = require('./config/express')();
 
-//url para receber a lista de produtos.
-app.get('/produtos', function(req, res){res.render("produtos/lista"); });
+//passo a variável app para ser usado durante a criação de rotas
+var rotaProdutos = require('./app/routes/produtos')(app);
 
 app.listen(3000, function(){
-    console.log("Servidor rodando....");
     console.log("Servidor rodando....");
 });

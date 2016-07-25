@@ -7,3 +7,7 @@ instalar o EJS (EMBEDDED JAVA SCRIPT) biblioteca utilizada o código js junto ht
    npm install ejs --save
 Instalar nodemon gerenciar o deploy/restart do servidor sempre que houver alteração nnon código.
  npm install -g nodemon
+
+Instalar Mysql para uso  na aplicação.
+
+npm install mysql --save
