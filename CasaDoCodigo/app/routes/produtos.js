@@ -1,22 +1,20 @@
 
+//FOI RETIRADO PORQUE O O EXPRESS LOAD ESTA CUIDANDO DAS DEPENDENCIAS (vide express.js)
+//var connectionFactory = require('../infra/connectionFactory');
+
 //definição de rota para a página de produtos 
 module.exports = function(app){
+
     return app.get('/produtos', function(req, res){
-       //importa objeto para uso do mysql
-       var mysql = require('mysql');
-       var connection = mysql.createConnection({
-           host: 'localhost',
-           user : 'root',
-           password: 'impacta',
-           database :'impacta' 
-       });
        
-       connection.query("select * from livros",function(err,results){
+       //var connection = connectionFactory();
+       var connection = app.infra.connectionFactory();
+       var produtosBanco = app.infra.produtosBanco; 
+       produtosBanco.lista(connection,function(err,results){
             res.send(results);
        });
-
+    
        connection.end();
-       
        //res.render("produtos/lista"); 
     });
 }

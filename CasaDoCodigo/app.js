@@ -22,7 +22,8 @@
 var app = require('./config/express')();
 
 //passo a variável app para ser usado durante a criação de rotas
-var rotaProdutos = require('./app/routes/produtos')(app);
+//ESTA PARTE FOI RETIRADA PORQUE AGORA O EXPRESS LOAD ESTA CARREGADNO AS DEPENDENCIAS DE ROTAS (VIDE express.js)
+//var rotaProdutos = require('./app/routes/produtos')(app);
 
 app.listen(3000, function(){
     console.log("Servidor rodando....");
