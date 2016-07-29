@@ -9,9 +9,10 @@ module.exports = function(app){
        
        //var connection = connectionFactory();
        var connection = app.infra.connectionFactory();
-       var produtosBanco = app.infra.produtosBanco; 
-       produtosBanco.lista(connection,function(err,results){
-            res.send(results);
+       var produtosDAO = new app.infra.ProdutosDAO(connection); 
+       produtosDAO.lista(function(err,results){
+            // res.send(results);
+            res.render('produtos/lista',{lista:results});
        });
     
        connection.end();
